@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f4baf2df5e384950ac6ac8c94d2655d1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f4baf2df5e384950ac6ac8c94d2655d1" ></div>
+        
+</body>
+<script>    
+    
+            var map_f4baf2df5e384950ac6ac8c94d2655d1 = L.map(
+                "map_f4baf2df5e384950ac6ac8c94d2655d1",
+                {
+                    center: [48.853, 2.35],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d0a0adb2aa8c48509cee4c471d48442b = L.tileLayer(
+                "https://tile.osm.ch/switzerland/{z}/{x}/{y}.png",
+                {"attribution": "CartoDB positron", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f4baf2df5e384950ac6ac8c94d2655d1);
+        
+    
+            var marker_cluster_af6ed9988e0444a1ab23e1a85686de7e = L.markerClusterGroup(
+                {}
+            );
+            map_f4baf2df5e384950ac6ac8c94d2655d1.addLayer(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var marker_78000fd5a441479aae0dcca8f9471b9d = L.marker(
+                [48.91039875761846, 2.3851355910301213],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_540673caaea54916af904a4ac5534204 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_78000fd5a441479aae0dcca8f9471b9d.setIcon(icon_540673caaea54916af904a4ac5534204);
+        
+    
+        var popup_74f23f478fe94fa49cba8107ea047e37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_235744afc53d4434aee866da64ee0412 = $(`<div id="html_235744afc53d4434aee866da64ee0412" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>209063434</td>     </tr>      <tr>         <td><strong>Name : </strong>André Karman - République</td>     </tr>      <tr>         <td><strong>Capacité : </strong>31</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>5</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>4</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814058</td>     </tr> </table> </div>`)[0];
+            popup_74f23f478fe94fa49cba8107ea047e37.setContent(html_235744afc53d4434aee866da64ee0412);
+        
+
+        marker_78000fd5a441479aae0dcca8f9471b9d.bindPopup(popup_74f23f478fe94fa49cba8107ea047e37)
+        ;
+
+        
+    
+    
+            var marker_f4bf602997f84496bb81fe8fb3c6b79e = L.marker(
+                [48.9155156, 2.3814103],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_bb9a126f0d074ffca996a2b46a0c9e06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f4bf602997f84496bb81fe8fb3c6b79e.setIcon(icon_bb9a126f0d074ffca996a2b46a0c9e06);
+        
+    
+        var popup_030487da429a4bd5b5c86d9be0f3ad35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc8da2b793e54d7b9e8cc3a35e8911f1 = $(`<div id="html_fc8da2b793e54d7b9e8cc3a35e8911f1" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>583539396</td>     </tr>      <tr>         <td><strong>Name : </strong>Anatole France - President Roosevelt</td>     </tr>      <tr>         <td><strong>Capacité : </strong>29</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>16</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>8</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>8</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814294</td>     </tr> </table> </div>`)[0];
+            popup_030487da429a4bd5b5c86d9be0f3ad35.setContent(html_fc8da2b793e54d7b9e8cc3a35e8911f1);
+        
+
+        marker_f4bf602997f84496bb81fe8fb3c6b79e.bindPopup(popup_030487da429a4bd5b5c86d9be0f3ad35)
+        ;
+
+        
+    
+    
+            var marker_117f56c8c9b34bba8c3acd6f0094d6d7 = L.marker(
+                [48.88633710236977, 2.407338917255402],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_945e450af8e54c65b57af4aa1e4950ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_117f56c8c9b34bba8c3acd6f0094d6d7.setIcon(icon_945e450af8e54c65b57af4aa1e4950ca);
+        
+    
+        var popup_e9e4c9ff129640c8b056f875b636a6db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0be69af62b149dda9e0335a0951f09a = $(`<div id="html_f0be69af62b149dda9e0335a0951f09a" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>209057581</td>     </tr>      <tr>         <td><strong>Name : </strong>Gabriel Péri - Francisco Ferrer</td>     </tr>      <tr>         <td><strong>Capacité : </strong>18</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>4</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>5</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814111</td>     </tr> </table> </div>`)[0];
+            popup_e9e4c9ff129640c8b056f875b636a6db.setContent(html_f0be69af62b149dda9e0335a0951f09a);
+        
+
+        marker_117f56c8c9b34bba8c3acd6f0094d6d7.bindPopup(popup_e9e4c9ff129640c8b056f875b636a6db)
+        ;
+
+        
+    
+    
+            var marker_a48c0d7439a642a0a7108049bf30a90a = L.marker(
+                [48.90713441498779, 2.396005728053061],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_100389bf7b89446f87019d43f77d9f43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a48c0d7439a642a0a7108049bf30a90a.setIcon(icon_100389bf7b89446f87019d43f77d9f43);
+        
+    
+        var popup_95e85300876e4f11831dc33c93ec514c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31cfba46d6544c409f1043c18213a899 = $(`<div id="html_31cfba46d6544c409f1043c18213a899" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>27415736</td>     </tr>      <tr>         <td><strong>Name : </strong>Jean Jaurès - Presles</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>13</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>4</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814223</td>     </tr> </table> </div>`)[0];
+            popup_95e85300876e4f11831dc33c93ec514c.setContent(html_31cfba46d6544c409f1043c18213a899);
+        
+
+        marker_a48c0d7439a642a0a7108049bf30a90a.bindPopup(popup_95e85300876e4f11831dc33c93ec514c)
+        ;
+
+        
+    
+    
+            var marker_bd90005d099a4df9948c5ad2b3961ff5 = L.marker(
+                [48.876111, 2.4677312],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_47663820ab1e4813ad37ea39339b459a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bd90005d099a4df9948c5ad2b3961ff5.setIcon(icon_47663820ab1e4813ad37ea39339b459a);
+        
+    
+        var popup_99ba4c2a3a9a42ea99acef6d4cc1e556 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9146589e874944ee80828ee78b64e25b = $(`<div id="html_9146589e874944ee80828ee78b64e25b" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>583178525</td>     </tr>      <tr>         <td><strong>Name : </strong>Boissière - Etienne Dolet</td>     </tr>      <tr>         <td><strong>Capacité : </strong>21</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>0</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814263</td>     </tr> </table> </div>`)[0];
+            popup_99ba4c2a3a9a42ea99acef6d4cc1e556.setContent(html_9146589e874944ee80828ee78b64e25b);
+        
+
+        marker_bd90005d099a4df9948c5ad2b3961ff5.bindPopup(popup_99ba4c2a3a9a42ea99acef6d4cc1e556)
+        ;
+
+        
+    
+    
+            var marker_c7fa059ad17c485ca6e5f5586adbacfe = L.marker(
+                [48.89110239200789, 2.402843534946442],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_ff984a88aafd475cbf0a13eeb444c3f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c7fa059ad17c485ca6e5f5586adbacfe.setIcon(icon_ff984a88aafd475cbf0a13eeb444c3f6);
+        
+    
+        var popup_5d1d9f5d7a8a408ea16946a00dae6020 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_108c1479e92c42c5a4162c1be3b0a5c8 = $(`<div id="html_108c1479e92c42c5a4162c1be3b0a5c8" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>588452142</td>     </tr>      <tr>         <td><strong>Name : </strong>Hoche - Jean Lolive</td>     </tr>      <tr>         <td><strong>Capacité : </strong>24</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>3</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814191</td>     </tr> </table> </div>`)[0];
+            popup_5d1d9f5d7a8a408ea16946a00dae6020.setContent(html_108c1479e92c42c5a4162c1be3b0a5c8);
+        
+
+        marker_c7fa059ad17c485ca6e5f5586adbacfe.bindPopup(popup_5d1d9f5d7a8a408ea16946a00dae6020)
+        ;
+
+        
+    
+    
+            var marker_c502926ffa434228ac174e559d0f967b = L.marker(
+                [48.854898095789295, 2.4186685681343083],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_0317e846b7d34e99975871b65e058c20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c502926ffa434228ac174e559d0f967b.setIcon(icon_0317e846b7d34e99975871b65e058c20);
+        
+    
+        var popup_c32ac8b01c8f4664a01d46715981cbc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe2018fe82de4b999fea42d61973428f = $(`<div id="html_fe2018fe82de4b999fea42d61973428f" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>129144878</td>     </tr>      <tr>         <td><strong>Name : </strong>Paris - Emile Zola</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>17</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>10</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>7</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814248</td>     </tr> </table> </div>`)[0];
+            popup_c32ac8b01c8f4664a01d46715981cbc7.setContent(html_fe2018fe82de4b999fea42d61973428f);
+        
+
+        marker_c502926ffa434228ac174e559d0f967b.bindPopup(popup_c32ac8b01c8f4664a01d46715981cbc7)
+        ;
+
+        
+    
+    
+            var marker_6072a4760d0b4c5cad043ef672dd7044 = L.marker(
+                [48.93009363207303, 2.3564037680625916],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_0148551ba96c4255bc3cab75f627579a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6072a4760d0b4c5cad043ef672dd7044.setIcon(icon_0148551ba96c4255bc3cab75f627579a);
+        
+    
+        var popup_1c4d19165e664d7bbe6afc6306b8cf31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_314f1bf1652148d2b1a3c04976cdafcb = $(`<div id="html_314f1bf1652148d2b1a3c04976cdafcb" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653063170</td>     </tr>      <tr>         <td><strong>Name : </strong>Place de la Porte de Paris</td>     </tr>      <tr>         <td><strong>Capacité : </strong>40</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>5</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>4</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814029</td>     </tr> </table> </div>`)[0];
+            popup_1c4d19165e664d7bbe6afc6306b8cf31.setContent(html_314f1bf1652148d2b1a3c04976cdafcb);
+        
+
+        marker_6072a4760d0b4c5cad043ef672dd7044.bindPopup(popup_1c4d19165e664d7bbe6afc6306b8cf31)
+        ;
+
+        
+    
+    
+            var marker_37804674828147e5b9e59b3471a29f04 = L.marker(
+                [48.85670169739857, 2.445072233676911],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_360fbddf7dce481d9b9df3562f70774d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_37804674828147e5b9e59b3471a29f04.setIcon(icon_360fbddf7dce481d9b9df3562f70774d);
+        
+    
+        var popup_81119acd80af47a7ae4f632166183030 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_301278eb9efb4c2b9cd9427cc2ba7727 = $(`<div id="html_301278eb9efb4c2b9cd9427cc2ba7727" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>129151834</td>     </tr>      <tr>         <td><strong>Name : </strong>Stalingrad - Désiré Chevalier</td>     </tr>      <tr>         <td><strong>Capacité : </strong>42</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>6</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814229</td>     </tr> </table> </div>`)[0];
+            popup_81119acd80af47a7ae4f632166183030.setContent(html_301278eb9efb4c2b9cd9427cc2ba7727);
+        
+
+        marker_37804674828147e5b9e59b3471a29f04.bindPopup(popup_81119acd80af47a7ae4f632166183030)
+        ;
+
+        
+    
+    
+            var marker_1599c412612f4d4ab210c7150b3a4820 = L.marker(
+                [48.89484799296163, 2.4188338592648506],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_c51e084cd51545b4953b7c13303e45b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1599c412612f4d4ab210c7150b3a4820.setIcon(icon_c51e084cd51545b4953b7c13303e45b3);
+        
+    
+        var popup_b818f150b2dc4bcc8b77b0aefc26d0b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_819aef7077834f2d87f660a64cb42d77 = $(`<div id="html_819aef7077834f2d87f660a64cb42d77" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>1062223873</td>     </tr>      <tr>         <td><strong>Name : </strong>Ancien Canal - Hélène Brion</td>     </tr>      <tr>         <td><strong>Capacité : </strong>23</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>6</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814212</td>     </tr> </table> </div>`)[0];
+            popup_b818f150b2dc4bcc8b77b0aefc26d0b2.setContent(html_819aef7077834f2d87f660a64cb42d77);
+        
+
+        marker_1599c412612f4d4ab210c7150b3a4820.bindPopup(popup_b818f150b2dc4bcc8b77b0aefc26d0b2)
+        ;
+
+        
+    
+    
+            var marker_1aef2665cc394b9d819d71084e7fcb2b = L.marker(
+                [48.90390751882016, 2.3830059170722966],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_7ca650ca64094ae68b2c4d3deeb29755 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1aef2665cc394b9d819d71084e7fcb2b.setIcon(icon_7ca650ca64094ae68b2c4d3deeb29755);
+        
+    
+        var popup_f6d2931b16364e6d97f37e1a11d12f80 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c00325f3f55f4541baf2e5060edae3c4 = $(`<div id="html_c00325f3f55f4541baf2e5060edae3c4" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>571923059</td>     </tr>      <tr>         <td><strong>Name : </strong>Bordier - Félix Faure</td>     </tr>      <tr>         <td><strong>Capacité : </strong>48</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>2</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814305</td>     </tr> </table> </div>`)[0];
+            popup_f6d2931b16364e6d97f37e1a11d12f80.setContent(html_c00325f3f55f4541baf2e5060edae3c4);
+        
+
+        marker_1aef2665cc394b9d819d71084e7fcb2b.bindPopup(popup_f6d2931b16364e6d97f37e1a11d12f80)
+        ;
+
+        
+    
+    
+            var marker_7c6e2ddfb0f24b88be1bd8e257854aee = L.marker(
+                [48.90812110228388, 2.378623187541962],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_6b607c8d384a483a9001d443c52e8544 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7c6e2ddfb0f24b88be1bd8e257854aee.setIcon(icon_6b607c8d384a483a9001d443c52e8544);
+        
+    
+        var popup_07ea3208a1cd437ea4e6ea58346c2f5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d957783197954ec3ae23ad71b75d0ce9 = $(`<div id="html_d957783197954ec3ae23ad71b75d0ce9" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>54000635</td>     </tr>      <tr>         <td><strong>Name : </strong>Félix Faure - Sadi Carnot</td>     </tr>      <tr>         <td><strong>Capacité : </strong>33</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>13</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814297</td>     </tr> </table> </div>`)[0];
+            popup_07ea3208a1cd437ea4e6ea58346c2f5b.setContent(html_d957783197954ec3ae23ad71b75d0ce9);
+        
+
+        marker_7c6e2ddfb0f24b88be1bd8e257854aee.bindPopup(popup_07ea3208a1cd437ea4e6ea58346c2f5b)
+        ;
+
+        
+    
+    
+            var marker_f90c88e2b0774b5581c387f7bf3bcbb1 = L.marker(
+                [48.90251907406377, 2.37408958375454],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_31a1e1d16c454aa09d177f17ce7a5410 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f90c88e2b0774b5581c387f7bf3bcbb1.setIcon(icon_31a1e1d16c454aa09d177f17ce7a5410);
+        
+    
+        var popup_f98684795d314ce3afa5adef84b291cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7a474f0acc54518ac1cb950c53117e2 = $(`<div id="html_b7a474f0acc54518ac1cb950c53117e2" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>2515855808</td>     </tr>      <tr>         <td><strong>Name : </strong>Madeleine Vionnet</td>     </tr>      <tr>         <td><strong>Capacité : </strong>34</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>14</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>5</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>9</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814072</td>     </tr> </table> </div>`)[0];
+            popup_f98684795d314ce3afa5adef84b291cb.setContent(html_b7a474f0acc54518ac1cb950c53117e2);
+        
+
+        marker_f90c88e2b0774b5581c387f7bf3bcbb1.bindPopup(popup_f98684795d314ce3afa5adef84b291cb)
+        ;
+
+        
+    
+    
+            var marker_27c1d61279bd45b9a89eea73df6a82ca = L.marker(
+                [48.8949922, 2.4253764],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_8dc464ee8c5c49b7b8d301800bda2200 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_27c1d61279bd45b9a89eea73df6a82ca.setIcon(icon_8dc464ee8c5c49b7b8d301800bda2200);
+        
+    
+        var popup_5a0ea360e937476d905c889222ad1e60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2603438ae57c41ab8d96eab0228016f0 = $(`<div id="html_2603438ae57c41ab8d96eab0228016f0" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>217572769</td>     </tr>      <tr>         <td><strong>Name : </strong>Anatole France - Jean Lolive</td>     </tr>      <tr>         <td><strong>Capacité : </strong>28</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>1</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>11</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814027</td>     </tr> </table> </div>`)[0];
+            popup_5a0ea360e937476d905c889222ad1e60.setContent(html_2603438ae57c41ab8d96eab0228016f0);
+        
+
+        marker_27c1d61279bd45b9a89eea73df6a82ca.bindPopup(popup_5a0ea360e937476d905c889222ad1e60)
+        ;
+
+        
+    
+    
+            var marker_545e6f1d61cc4bd797c100dcee39c5f6 = L.marker(
+                [48.92540695835961, 2.3644426837563515],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_e8cd27779e584911b2d5445fa608907f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_545e6f1d61cc4bd797c100dcee39c5f6.setIcon(icon_e8cd27779e584911b2d5445fa608907f);
+        
+    
+        var popup_f1f5de5ff0b7465f8195de3380a7f30d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_62887e0b05ad4519973899ce15e635fe = $(`<div id="html_62887e0b05ad4519973899ce15e635fe" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653055049</td>     </tr>      <tr>         <td><strong>Name : </strong>Place du Cornillon - Stade de France</td>     </tr>      <tr>         <td><strong>Capacité : </strong>34</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>20</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>11</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814214</td>     </tr> </table> </div>`)[0];
+            popup_f1f5de5ff0b7465f8195de3380a7f30d.setContent(html_62887e0b05ad4519973899ce15e635fe);
+        
+
+        marker_545e6f1d61cc4bd797c100dcee39c5f6.bindPopup(popup_f1f5de5ff0b7465f8195de3380a7f30d)
+        ;
+
+        
+    
+    
+            var marker_2906925b1b9b4eee8cb0ff156cf8306d = L.marker(
+                [48.93626891059109, 2.3588666820200914],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_e70718a499574f469a8adb2849dcf8fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2906925b1b9b4eee8cb0ff156cf8306d.setIcon(icon_e70718a499574f469a8adb2849dcf8fb);
+        
+    
+        var popup_2709fee35aa0438f8aaef7f360717060 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f87e84a138044fa790a6f52b1bac0f09 = $(`<div id="html_f87e84a138044fa790a6f52b1bac0f09" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>2515829865</td>     </tr>      <tr>         <td><strong>Name : </strong>Basilique</td>     </tr>      <tr>         <td><strong>Capacité : </strong>22</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>15</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>3</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>12</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814301</td>     </tr> </table> </div>`)[0];
+            popup_2709fee35aa0438f8aaef7f360717060.setContent(html_f87e84a138044fa790a6f52b1bac0f09);
+        
+
+        marker_2906925b1b9b4eee8cb0ff156cf8306d.bindPopup(popup_2709fee35aa0438f8aaef7f360717060)
+        ;
+
+        
+    
+    
+            var marker_d95fe6d8963e411c809ae34523559a40 = L.marker(
+                [48.852988, 2.42467],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_ce013588053a4ee29a1f4aff314a26a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d95fe6d8963e411c809ae34523559a40.setIcon(icon_ce013588053a4ee29a1f4aff314a26a3);
+        
+    
+        var popup_c1da98d3e47d49cfb8fd371401aa9202 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5682e52bd474e67b62afb4fabbe5f4a = $(`<div id="html_a5682e52bd474e67b62afb4fabbe5f4a" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>3230175424</td>     </tr>      <tr>         <td><strong>Name : </strong>Place de la République</td>     </tr>      <tr>         <td><strong>Capacité : </strong>28</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>17</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>10</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814241</td>     </tr> </table> </div>`)[0];
+            popup_c1da98d3e47d49cfb8fd371401aa9202.setContent(html_a5682e52bd474e67b62afb4fabbe5f4a);
+        
+
+        marker_d95fe6d8963e411c809ae34523559a40.bindPopup(popup_c1da98d3e47d49cfb8fd371401aa9202)
+        ;
+
+        
+    
+    
+            var marker_fcee12c255c84c95b23ade50bb33ecec = L.marker(
+                [48.90271566255436, 2.3933270573616032],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_951d7ea60fc045748df630e1918da55c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fcee12c255c84c95b23ade50bb33ecec.setIcon(icon_951d7ea60fc045748df630e1918da55c);
+        
+    
+        var popup_871912958ad54e21941dd1ab6c3622bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44020b45e12a42bda2a84158e61a414a = $(`<div id="html_44020b45e12a42bda2a84158e61a414a" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>126175087</td>     </tr>      <tr>         <td><strong>Name : </strong>Gabrielle Josserand - Edouard Vaillant</td>     </tr>      <tr>         <td><strong>Capacité : </strong>25</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>3</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>8</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814289</td>     </tr> </table> </div>`)[0];
+            popup_871912958ad54e21941dd1ab6c3622bc.setContent(html_44020b45e12a42bda2a84158e61a414a);
+        
+
+        marker_fcee12c255c84c95b23ade50bb33ecec.bindPopup(popup_871912958ad54e21941dd1ab6c3622bc)
+        ;
+
+        
+    
+    
+            var marker_65f157806d3c4723a95979c4fd13b051 = L.marker(
+                [48.8932644350857, 2.4126765131950383],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_0f9c4e0c03e04d399095951e42abc6dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_65f157806d3c4723a95979c4fd13b051.setIcon(icon_0f9c4e0c03e04d399095951e42abc6dd);
+        
+    
+        var popup_9e9cb031540f42d2aef60fa3b639ca2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e3eae01a22249e49bbd2542a65b64f5 = $(`<div id="html_9e3eae01a22249e49bbd2542a65b64f5" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>339797666</td>     </tr>      <tr>         <td><strong>Name : </strong>Charles de Gaulle - Jean Lolive</td>     </tr>      <tr>         <td><strong>Capacité : </strong>26</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>5</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814001</td>     </tr> </table> </div>`)[0];
+            popup_9e9cb031540f42d2aef60fa3b639ca2e.setContent(html_9e3eae01a22249e49bbd2542a65b64f5);
+        
+
+        marker_65f157806d3c4723a95979c4fd13b051.bindPopup(popup_9e9cb031540f42d2aef60fa3b639ca2e)
+        ;
+
+        
+    
+    
+            var marker_d3153d3a81a646adbd2be3ba38152c85 = L.marker(
+                [48.91516726221354, 2.357633225619793],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_412123c6fa0640698006256bd617ec53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d3153d3a81a646adbd2be3ba38152c85.setIcon(icon_412123c6fa0640698006256bd617ec53);
+        
+    
+        var popup_4307d86653a040359f2dacb13a4770f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94740ea6fb8b4330beedaf0048079e5d = $(`<div id="html_94740ea6fb8b4330beedaf0048079e5d" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>213987795</td>     </tr>      <tr>         <td><strong>Name : </strong>Wilson - Landy</td>     </tr>      <tr>         <td><strong>Capacité : </strong>40</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>2</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>7</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814309</td>     </tr> </table> </div>`)[0];
+            popup_4307d86653a040359f2dacb13a4770f8.setContent(html_94740ea6fb8b4330beedaf0048079e5d);
+        
+
+        marker_d3153d3a81a646adbd2be3ba38152c85.bindPopup(popup_4307d86653a040359f2dacb13a4770f8)
+        ;
+
+        
+    
+    
+            var marker_9cc9d8999d3b4c7e9c1a83b6a46c74e0 = L.marker(
+                [48.873802681432146, 2.427820265293122],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_9b0718c7dd064044b8ec0fbf747ab888 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9cc9d8999d3b4c7e9c1a83b6a46c74e0.setIcon(icon_9b0718c7dd064044b8ec0fbf747ab888);
+        
+    
+        var popup_ad1a500ca57548eb98aee70c250d3af8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_449bd348ba904b119d7196c82f921271 = $(`<div id="html_449bd348ba904b119d7196c82f921271" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>82568336</td>     </tr>      <tr>         <td><strong>Name : </strong>Jeanne Hornet - Girardot</td>     </tr>      <tr>         <td><strong>Capacité : </strong>29</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>0</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814255</td>     </tr> </table> </div>`)[0];
+            popup_ad1a500ca57548eb98aee70c250d3af8.setContent(html_449bd348ba904b119d7196c82f921271);
+        
+
+        marker_9cc9d8999d3b4c7e9c1a83b6a46c74e0.bindPopup(popup_ad1a500ca57548eb98aee70c250d3af8)
+        ;
+
+        
+    
+    
+            var marker_cf347ef77a264b4a959e3dc568998f87 = L.marker(
+                [48.85853523359734, 2.4273508787155156],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_8234c044a8c44010b27f5750eb7ac710 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cf347ef77a264b4a959e3dc568998f87.setIcon(icon_8234c044a8c44010b27f5750eb7ac710);
+        
+    
+        var popup_689e46f513f14e6096c1670c4f2dd65c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3944c00c860e447e9a4177ba85c5ca15 = $(`<div id="html_3944c00c860e447e9a4177ba85c5ca15" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>263610599</td>     </tr>      <tr>         <td><strong>Name : </strong>Centenaire - Sorins</td>     </tr>      <tr>         <td><strong>Capacité : </strong>45</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>15</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>6</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>9</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814207</td>     </tr> </table> </div>`)[0];
+            popup_689e46f513f14e6096c1670c4f2dd65c.setContent(html_3944c00c860e447e9a4177ba85c5ca15);
+        
+
+        marker_cf347ef77a264b4a959e3dc568998f87.bindPopup(popup_689e46f513f14e6096c1670c4f2dd65c)
+        ;
+
+        
+    
+    
+            var marker_36b8b886e1524afbb41b6610228b9bf6 = L.marker(
+                [48.85273792380526, 2.429966032505036],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_8682214f17164e71bef5de40af39d9e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_36b8b886e1524afbb41b6610228b9bf6.setIcon(icon_8682214f17164e71bef5de40af39d9e0);
+        
+    
+        var popup_006ee02d001e458a907c16cb365b473a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_398d6dd64a2e461abcc04041db0c47f9 = $(`<div id="html_398d6dd64a2e461abcc04041db0c47f9" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>263732151</td>     </tr>      <tr>         <td><strong>Name : </strong>Gambetta - Michelet</td>     </tr>      <tr>         <td><strong>Capacité : </strong>33</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>20</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>8</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>12</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814237</td>     </tr> </table> </div>`)[0];
+            popup_006ee02d001e458a907c16cb365b473a.setContent(html_398d6dd64a2e461abcc04041db0c47f9);
+        
+
+        marker_36b8b886e1524afbb41b6610228b9bf6.bindPopup(popup_006ee02d001e458a907c16cb365b473a)
+        ;
+
+        
+    
+    
+            var marker_96202633abb94408bde6a05978d15ecf = L.marker(
+                [48.88365620689917, 2.4033531546592717],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_fe3d28315ac2473199d830dedf48c883 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_96202633abb94408bde6a05978d15ecf.setIcon(icon_fe3d28315ac2473199d830dedf48c883);
+        
+    
+        var popup_faab5684312645b8ab1b00c7572445ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67d7cea9e75a4028bd545357df511774 = $(`<div id="html_67d7cea9e75a4028bd545357df511774" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>213995665</td>     </tr>      <tr>         <td><strong>Name : </strong>Square Edmond Pépin</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>4</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814005</td>     </tr> </table> </div>`)[0];
+            popup_faab5684312645b8ab1b00c7572445ab.setContent(html_67d7cea9e75a4028bd545357df511774);
+        
+
+        marker_96202633abb94408bde6a05978d15ecf.bindPopup(popup_faab5684312645b8ab1b00c7572445ab)
+        ;
+
+        
+    
+    
+            var marker_6cfcc93ce4c74d9f808a670d7e538b33 = L.marker(
+                [48.89056394743836, 2.4064831843792427],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_61b2d3ebf81240588b704f55b31d567c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6cfcc93ce4c74d9f808a670d7e538b33.setIcon(icon_61b2d3ebf81240588b704f55b31d567c);
+        
+    
+        var popup_be32823250954fe684e924f015c779c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfbac89f77b74de0be408a6159e20a65 = $(`<div id="html_dfbac89f77b74de0be408a6159e20a65" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>278576043</td>     </tr>      <tr>         <td><strong>Name : </strong>Honoré d'Estienne d'Ovres - Grilles</td>     </tr>      <tr>         <td><strong>Capacité : </strong>18</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>8</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>3</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814148</td>     </tr> </table> </div>`)[0];
+            popup_be32823250954fe684e924f015c779c1.setContent(html_dfbac89f77b74de0be408a6159e20a65);
+        
+
+        marker_6cfcc93ce4c74d9f808a670d7e538b33.bindPopup(popup_be32823250954fe684e924f015c779c1)
+        ;
+
+        
+    
+    
+            var marker_c1eddfb852314b379eddea5bdca0e008 = L.marker(
+                [48.90680713698062, 2.364541214992642],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_257987d3523c41f48bab61abd99488d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c1eddfb852314b379eddea5bdca0e008.setIcon(icon_257987d3523c41f48bab61abd99488d8);
+        
+    
+        var popup_29b51d4ba69046f2ab225f65680fdd47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a91a90e4169344ad824a0abc9eba7e9a = $(`<div id="html_a91a90e4169344ad824a0abc9eba7e9a" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653076393</td>     </tr>      <tr>         <td><strong>Name : </strong>Place du Front Populaire - George Sand</td>     </tr>      <tr>         <td><strong>Capacité : </strong>35</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>1</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>8</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814060</td>     </tr> </table> </div>`)[0];
+            popup_29b51d4ba69046f2ab225f65680fdd47.setContent(html_a91a90e4169344ad824a0abc9eba7e9a);
+        
+
+        marker_c1eddfb852314b379eddea5bdca0e008.bindPopup(popup_29b51d4ba69046f2ab225f65680fdd47)
+        ;
+
+        
+    
+    
+            var marker_3306c8c65c444e20ac5a6699a7a5ab43 = L.marker(
+                [48.91042343752563, 2.399576604366303],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_8960554c2cb14635825b605da0e8743e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3306c8c65c444e20ac5a6699a7a5ab43.setIcon(icon_8960554c2cb14635825b605da0e8743e);
+        
+    
+        var popup_1c5ba613712b446f88108c77f713f47e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7725344cf3fc4ce8b100a5ed6edfffda = $(`<div id="html_7725344cf3fc4ce8b100a5ed6edfffda" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>213999554</td>     </tr>      <tr>         <td><strong>Name : </strong>Jean Jaurès - Ouvrières Pivéreuses</td>     </tr>      <tr>         <td><strong>Capacité : </strong>20</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>14</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>8</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814300</td>     </tr> </table> </div>`)[0];
+            popup_1c5ba613712b446f88108c77f713f47e.setContent(html_7725344cf3fc4ce8b100a5ed6edfffda);
+        
+
+        marker_3306c8c65c444e20ac5a6699a7a5ab43.bindPopup(popup_1c5ba613712b446f88108c77f713f47e)
+        ;
+
+        
+    
+    
+            var marker_ad285929992b4918812a7f1e25ce132c = L.marker(
+                [48.91844023641836, 2.3935630917549138],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_f680fbb5e67841dbacfa0b6a5b367899 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ad285929992b4918812a7f1e25ce132c.setIcon(icon_f680fbb5e67841dbacfa0b6a5b367899);
+        
+    
+        var popup_2e37333f0c50444aaf078f54d1613892 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33a33a01d14d48eaa4c5af5b347752f1 = $(`<div id="html_33a33a01d14d48eaa4c5af5b347752f1" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>131094294</td>     </tr>      <tr>         <td><strong>Name : </strong>Charles Tillon - Cimetière Communal</td>     </tr>      <tr>         <td><strong>Capacité : </strong>31</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>10</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>9</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>1</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619813963</td>     </tr> </table> </div>`)[0];
+            popup_2e37333f0c50444aaf078f54d1613892.setContent(html_33a33a01d14d48eaa4c5af5b347752f1);
+        
+
+        marker_ad285929992b4918812a7f1e25ce132c.bindPopup(popup_2e37333f0c50444aaf078f54d1613892)
+        ;
+
+        
+    
+    
+            var marker_84d8d941ab664e7f80b4a528d7734186 = L.marker(
+                [48.915096534520316, 2.375951372087002],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_1395aa98fa58472bb6c38ac59adefac9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_84d8d941ab664e7f80b4a528d7734186.setIcon(icon_1395aa98fa58472bb6c38ac59adefac9);
+        
+    
+        var popup_1730c600b71045039847a5504f3ce91d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b48c54d18fe24931b0dd4ecf42f23c0f = $(`<div id="html_b48c54d18fe24931b0dd4ecf42f23c0f" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>27414713</td>     </tr>      <tr>         <td><strong>Name : </strong>Landy - Heurtault</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>6</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>5</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814302</td>     </tr> </table> </div>`)[0];
+            popup_1730c600b71045039847a5504f3ce91d.setContent(html_b48c54d18fe24931b0dd4ecf42f23c0f);
+        
+
+        marker_84d8d941ab664e7f80b4a528d7734186.bindPopup(popup_1730c600b71045039847a5504f3ce91d)
+        ;
+
+        
+    
+    
+            var marker_effa061b47f44656b940b7f079c8be03 = L.marker(
+                [48.87125651901151, 2.4865807592868805],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_1109bd623aae46118edfdfad89fe7e3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_effa061b47f44656b940b7f079c8be03.setIcon(icon_1109bd623aae46118edfdfad89fe7e3f);
+        
+    
+        var popup_770b5da58e3f4c4db4acfbf5c9c65866 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1239019ef3fc4df5a09ee9d1052f6e97 = $(`<div id="html_1239019ef3fc4df5a09ee9d1052f6e97" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653222953</td>     </tr>      <tr>         <td><strong>Name : </strong>Mairie de Rosny-sous-Bois</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>17</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>1</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>16</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814280</td>     </tr> </table> </div>`)[0];
+            popup_770b5da58e3f4c4db4acfbf5c9c65866.setContent(html_1239019ef3fc4df5a09ee9d1052f6e97);
+        
+
+        marker_effa061b47f44656b940b7f079c8be03.bindPopup(popup_770b5da58e3f4c4db4acfbf5c9c65866)
+        ;
+
+        
+    
+    
+            var marker_39985d32515b42b5a844a38c14e106dd = L.marker(
+                [48.938882272105374, 2.3566243797540665],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_3ed8e067e9d3434ab31dff58d473875a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_39985d32515b42b5a844a38c14e106dd.setIcon(icon_3ed8e067e9d3434ab31dff58d473875a);
+        
+    
+        var popup_45147346ace647e4997f1508360515b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_012cb3d372bb4e88bf1ff41b33858123 = $(`<div id="html_012cb3d372bb4e88bf1ff41b33858123" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653072212</td>     </tr>      <tr>         <td><strong>Name : </strong>Place du 8 mai 1945</td>     </tr>      <tr>         <td><strong>Capacité : </strong>30</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>10</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>3</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814156</td>     </tr> </table> </div>`)[0];
+            popup_45147346ace647e4997f1508360515b1.setContent(html_012cb3d372bb4e88bf1ff41b33858123);
+        
+
+        marker_39985d32515b42b5a844a38c14e106dd.bindPopup(popup_45147346ace647e4997f1508360515b1)
+        ;
+
+        
+    
+    
+            var marker_387a48e964394bfeb1c3e9eec3f69b01 = L.marker(
+                [48.92034156960326, 2.3438543826341625],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_e104815e3164491783244b0462b9428c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_387a48e964394bfeb1c3e9eec3f69b01.setIcon(icon_e104815e3164491783244b0462b9428c);
+        
+    
+        var popup_df860a80d94f4e478310e41bc59693ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a80afdb635ab41c280e4a41ca45850e7 = $(`<div id="html_a80afdb635ab41c280e4a41ca45850e7" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>653046369</td>     </tr>      <tr>         <td><strong>Name : </strong>Carrefour Pleyel</td>     </tr>      <tr>         <td><strong>Capacité : </strong>36</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>6</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>6</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814299</td>     </tr> </table> </div>`)[0];
+            popup_df860a80d94f4e478310e41bc59693ef.setContent(html_a80afdb635ab41c280e4a41ca45850e7);
+        
+
+        marker_387a48e964394bfeb1c3e9eec3f69b01.bindPopup(popup_df860a80d94f4e478310e41bc59693ef)
+        ;
+
+        
+    
+    
+            var marker_ee8a814906d5407aaaf8c0608d7e1bc0 = L.marker(
+                [48.88958925894009, 2.4198862910270695],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_e1da8b2532e14d4aae4ac2cf27683f71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ee8a814906d5407aaaf8c0608d7e1bc0.setIcon(icon_e1da8b2532e14d4aae4ac2cf27683f71);
+        
+    
+        var popup_db852ac505124cff80e5cb6f3cc93127 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3eff958077f84b438a0273b0a461eb8d = $(`<div id="html_3eff958077f84b438a0273b0a461eb8d" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>66491409</td>     </tr>      <tr>         <td><strong>Name : </strong>Guillaume Tell - Parc Henri Barbusse</td>     </tr>      <tr>         <td><strong>Capacité : </strong>20</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>11</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>8</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>3</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814275</td>     </tr> </table> </div>`)[0];
+            popup_db852ac505124cff80e5cb6f3cc93127.setContent(html_3eff958077f84b438a0273b0a461eb8d);
+        
+
+        marker_ee8a814906d5407aaaf8c0608d7e1bc0.bindPopup(popup_db852ac505124cff80e5cb6f3cc93127)
+        ;
+
+        
+    
+    
+            var marker_de493a60c5f54a2eb1a2635e542f1e7b = L.marker(
+                [48.86286468896063, 2.495676465332508],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_2152281661854198b95673c884ca698b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_de493a60c5f54a2eb1a2635e542f1e7b.setIcon(icon_2152281661854198b95673c884ca698b);
+        
+    
+        var popup_229b85ca113d430fab864c7167a96efa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8fae16cc39c43a192004cc1a713e2fc = $(`<div id="html_e8fae16cc39c43a192004cc1a713e2fc" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>124167835</td>     </tr>      <tr>         <td><strong>Name : </strong>Lavoisier - Missak Manouchian</td>     </tr>      <tr>         <td><strong>Capacité : </strong>18</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>12</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>5</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>7</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619813748</td>     </tr> </table> </div>`)[0];
+            popup_229b85ca113d430fab864c7167a96efa.setContent(html_e8fae16cc39c43a192004cc1a713e2fc);
+        
+
+        marker_de493a60c5f54a2eb1a2635e542f1e7b.bindPopup(popup_229b85ca113d430fab864c7167a96efa)
+        ;
+
+        
+    
+    
+            var marker_9ddcefc3c4a7474d9292a9dd7022ddb2 = L.marker(
+                [48.868421318555306, 2.417958788573742],
+                {}
+            ).addTo(marker_cluster_af6ed9988e0444a1ab23e1a85686de7e);
+        
+    
+            var icon_2097d117d5fa40339b4b7e3a9485c74d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9ddcefc3c4a7474d9292a9dd7022ddb2.setIcon(icon_2097d117d5fa40339b4b7e3a9485c74d);
+        
+    
+        var popup_98195078d625465c9bf72ef5baa23cfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db6abec1185f4222ba62f6a08f27ab78 = $(`<div id="html_db6abec1185f4222ba62f6a08f27ab78" style="width: 100.0%; height: 100.0%;"> <table style="width: 200px">     <tr>         <td><strong>Id : </strong>102752610</td>     </tr>      <tr>         <td><strong>Name : </strong>Mairie de Bagnolet</td>     </tr>      <tr>         <td><strong>Capacité : </strong>28</td>     </tr>     <tr>         <td><strong>Velib Dispo : </strong>9</td>     </tr>     <tr>         <td><strong>Velib electrique : </strong>7</td>     </tr>     <tr>         <td><strong>Velib mecanique : </strong>2</td>     </tr>     <tr>         <td><strong>Dernière MAJ : </strong>1619814203</td>     </tr> </table> </div>`)[0];
+            popup_98195078d625465c9bf72ef5baa23cfa.setContent(html_db6abec1185f4222ba62f6a08f27ab78);
+        
+
+        marker_9ddcefc3c4a7474d9292a9dd7022ddb2.bindPopup(popup_98195078d625465c9bf72ef5baa23cfa)
+        ;
+
+        
+    
+    
+
+        function geo_json_3a397c7815b5433a862b2e7d5943c641_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3a397c7815b5433a862b2e7d5943c641 = L.geoJson(null, {
+                onEachFeature: geo_json_3a397c7815b5433a862b2e7d5943c641_onEachFeature,
+            
+        });
+
+        function geo_json_3a397c7815b5433a862b2e7d5943c641_add (data) {
+            geo_json_3a397c7815b5433a862b2e7d5943c641
+                .addData(data)
+                .addTo(map_f4baf2df5e384950ac6ac8c94d2655d1);
+        }
+            geo_json_3a397c7815b5433a862b2e7d5943c641_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[2.55306, 49.00982], [2.55814, 49.01201], [2.56579, 49.0124], [2.56619, 49.01105], [2.56878, 49.01113], [2.57055, 49.0077], [2.56685, 49.00691], [2.56433, 49.00745], [2.56466, 49.00565], [2.56951, 49.00578], [2.56903, 49.00393], [2.57122, 49.00416], [2.57346, 49.0011], [2.57584, 49.00029], [2.57759, 48.99573], [2.58099, 48.99047], [2.57934, 48.99016], [2.58144, 48.98593], [2.5798, 48.98466], [2.57679, 48.98413], [2.57869, 48.97995], [2.57868, 48.97914], [2.57403, 48.97937], [2.56907, 48.98042], [2.56352, 48.98039], [2.56248, 48.97886], [2.56577, 48.97606], [2.5718, 48.96867], [2.57901, 48.96201], [2.58372, 48.95705], [2.58588, 48.957], [2.58981, 48.95344], [2.59212, 48.94867], [2.59361, 48.94728], [2.59347, 48.94539], [2.59593, 48.93861], [2.59771, 48.93805], [2.60122, 48.93844], [2.60319, 48.93754], [2.60208, 48.93462], [2.60315, 48.93048], [2.6026, 48.92936], [2.59924, 48.92801], [2.59739, 48.92667], [2.59418, 48.92574], [2.58967, 48.92269], [2.58877, 48.92094], [2.589, 48.91727], [2.59045, 48.91581], [2.59075, 48.91188], [2.58881, 48.90949], [2.59237, 48.9077], [2.59081, 48.90657], [2.58929, 48.90644], [2.58542, 48.90463], [2.5842, 48.90335], [2.5847, 48.90213], [2.58708, 48.89981], [2.58893, 48.89864], [2.58695, 48.89814], [2.58703, 48.89395], [2.5853, 48.89378], [2.58386, 48.89491], [2.57823, 48.89337], [2.57663, 48.89223], [2.57402, 48.89274], [2.57223, 48.8925], [2.57016, 48.89039], [2.56682, 48.89092], [2.56417, 48.88911], [2.56275, 48.88971], [2.56149, 48.88888], [2.56139, 48.88763], [2.55941, 48.88647], [2.56037, 48.88417], [2.56487, 48.88144], [2.56862, 48.8814], [2.57137, 48.8797], [2.56972, 48.87543], [2.56801, 48.87435], [2.5682, 48.87214], [2.57068, 48.86935], [2.56763, 48.86588], [2.56936, 48.86624], [2.57242, 48.86794], [2.57551, 48.86597], [2.57802, 48.86521], [2.5844, 48.86546], [2.58733, 48.86501], [2.58793, 48.86361], [2.58635, 48.86001], [2.58356, 48.85822], [2.58171, 48.85836], [2.58306, 48.85543], [2.57794, 48.85491], [2.57384, 48.85338], [2.58006, 48.8437], [2.58663, 48.8338], [2.58572, 48.83057], [2.58585, 48.82895], [2.58726, 48.82566], [2.59165, 48.82767], [2.59271, 48.82538], [2.59237, 48.82381], [2.5946, 48.82129], [2.59447, 48.82066], [2.59565, 48.81359], [2.59646, 48.81089], [2.59514, 48.80918], [2.59228, 48.80744], [2.59024, 48.80901], [2.58243, 48.81024], [2.57801, 48.81211], [2.57413, 48.81291], [2.57454, 48.81369], [2.57006, 48.81504], [2.5685, 48.81828], [2.57098, 48.82268], [2.57221, 48.82366], [2.56812, 48.82426], [2.56132, 48.82648], [2.56037, 48.82882], [2.55758, 48.83009], [2.55665, 48.83134], [2.55501, 48.83134], [2.55284, 48.83252], [2.5474, 48.83611], [2.54418, 48.83499], [2.5382, 48.8368], [2.53665, 48.83851], [2.54026, 48.83934], [2.53745, 48.84117], [2.53563, 48.8429], [2.53443, 48.84528], [2.5287, 48.84376], [2.52484, 48.84907], [2.51898, 48.84818], [2.51565, 48.85138], [2.51367, 48.85017], [2.51197, 48.85242], [2.50938, 48.8531], [2.5068, 48.85508], [2.50544, 48.85719], [2.50394, 48.85733], [2.49972, 48.85568], [2.49897, 48.85675], [2.49652, 48.85609], [2.49496, 48.85883], [2.49647, 48.85919], [2.49612, 48.86076], [2.49395, 48.86058], [2.49162, 48.85968], [2.49101, 48.86081], [2.48875, 48.86055], [2.48153, 48.86141], [2.48078, 48.86015], [2.47596, 48.86042], [2.47357, 48.86025], [2.46825, 48.8607], [2.46676, 48.86003], [2.4673, 48.85666], [2.45604, 48.85582], [2.45386, 48.85546], [2.44874, 48.85344], [2.4471, 48.85116], [2.44438, 48.85178], [2.44214, 48.85291], [2.43518, 48.85328], [2.43443, 48.85085], [2.42953, 48.85098], [2.42918, 48.84874], [2.41931, 48.84933], [2.41634, 48.84924], [2.41471, 48.85865], [2.41366, 48.863], [2.41402, 48.86804], [2.41394, 48.87083], [2.41239, 48.876], [2.40946, 48.8801], [2.40409, 48.8814], [2.4002, 48.88383], [2.39891, 48.88563], [2.39844, 48.89094], [2.39762, 48.89458], [2.3949, 48.89844], [2.39033, 48.90101], [2.38515, 48.90201], [2.37029, 48.90165], [2.34839, 48.90153], [2.32726, 48.90107], [2.32063, 48.9008], [2.31988, 48.90046], [2.31961, 48.90131], [2.32088, 48.90464], [2.31796, 48.90794], [2.31656, 48.91028], [2.31376, 48.91401], [2.31982, 48.91594], [2.32267, 48.91919], [2.32575, 48.92059], [2.33243, 48.92634], [2.33469, 48.92912], [2.33635, 48.93235], [2.33697, 48.93536], [2.33556, 48.94068], [2.3339, 48.94248], [2.3321, 48.94359], [2.32697, 48.94536], [2.32069, 48.94653], [2.31167, 48.94795], [2.30198, 48.95015], [2.30006, 48.95042], [2.29162, 48.95077], [2.29097, 48.95097], [2.29228, 48.95139], [2.28825, 48.95835], [2.28982, 48.96145], [2.29896, 48.9663], [2.30156, 48.96523], [2.30497, 48.96231], [2.30894, 48.96351], [2.31037, 48.96175], [2.31318, 48.96222], [2.31918, 48.95867], [2.3228, 48.95754], [2.32511, 48.95809], [2.32773, 48.95966], [2.33297, 48.95552], [2.33427, 48.95604], [2.33799, 48.95998], [2.33753, 48.96084], [2.33967, 48.96267], [2.3441, 48.96824], [2.35142, 48.96667], [2.35393, 48.96573], [2.35644, 48.96911], [2.35872, 48.97274], [2.36022, 48.97252], [2.36149, 48.97384], [2.36528, 48.97303], [2.36616, 48.97413], [2.36952, 48.97314], [2.37839, 48.97166], [2.38454, 48.971], [2.38463, 48.97013], [2.38869, 48.96676], [2.39375, 48.96342], [2.39797, 48.95989], [2.40241, 48.95793], [2.40329, 48.95802], [2.40738, 48.95612], [2.40971, 48.95793], [2.41318, 48.95772], [2.41755, 48.95951], [2.41885, 48.95775], [2.42542, 48.95922], [2.42816, 48.95904], [2.43219, 48.95768], [2.43591, 48.95518], [2.43725, 48.95581], [2.44116, 48.95648], [2.44522, 48.95682], [2.45034, 48.95492], [2.45601, 48.95577], [2.45949, 48.95505], [2.46086, 48.95846], [2.46332, 48.95999], [2.46733, 48.96433], [2.46943, 48.96305], [2.47502, 48.96776], [2.47781, 48.96671], [2.48075, 48.96982], [2.48381, 48.96831], [2.48683, 48.96729], [2.49013, 48.97016], [2.48829, 48.97116], [2.49274, 48.97453], [2.49601, 48.97272], [2.49809, 48.97395], [2.49585, 48.97501], [2.50052, 48.97529], [2.50215, 48.97657], [2.5004, 48.9777], [2.5037, 48.97947], [2.50488, 48.9788], [2.50672, 48.97989], [2.51051, 48.98067], [2.51477, 48.98226], [2.51265, 48.98587], [2.51702, 48.98618], [2.51689, 48.98762], [2.51894, 48.98774], [2.51882, 48.99076], [2.52053, 48.99207], [2.52292, 48.99193], [2.52437, 48.99625], [2.52787, 49.00028], [2.52903, 49.00036], [2.53061, 49.00189], [2.53224, 49.00522], [2.5355, 49.00656], [2.53565, 49.00528], [2.54406, 49.00559], [2.54429, 49.0047], [2.54777, 49.00487], [2.54798, 49.00304], [2.54928, 49.00306], [2.54882, 49.00665], [2.55309, 49.00677], [2.55306, 49.00982]]], "type": "Polygon"}, "properties": {"code": "93", "nom": "Seine-Saint-Denis"}, "type": "Feature"}], "name": "departement", "type": "FeatureCollection"});
+
+        
+</script>
