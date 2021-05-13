@@ -1,8 +1,7 @@
 COMMENT EXECUTER LE SCRIPT :
 
 le script s'execute sans paramètre en executant le fichier principale carto_velib.py en ligne de commande ou a partir de pycharm directement
-j'ai réussi a rajouter le paramètre file, par contre,
-j'ai toujours une erreur en executant le cote du coup j'ai commenté cette partie la pour que le script marche lorsqu'on l'appel sans paramètre
+
 
 
 
@@ -30,9 +29,4 @@ config.ini : fichier de paramètres
 
 
 
-
-Problème rencontrées :
-1- trouver une façon optimale pour optimiser la jointure entre les deux sources de données.
-
-2- je n'ai pas très bien compris la partie sur les fichiers de configuration et leur utilisation, surtout pour les paramètres.
 
